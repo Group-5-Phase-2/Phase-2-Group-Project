@@ -1,7 +1,7 @@
 function Login (){
     return (
         <div>
-            <h3>This is the login page</h3>
+            <h1>This is the login page</h1>
         </div>
     )
 }
