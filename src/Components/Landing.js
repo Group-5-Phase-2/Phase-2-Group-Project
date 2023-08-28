@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import { Link, Outlet } from "react-router-dom";
 
 
