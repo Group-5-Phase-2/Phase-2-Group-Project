@@ -1,11 +1,27 @@
-// import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
+import {useState} from 'react'
 
 function Cart ({cartProducts, onRemoveFromCart}){
-    // const [cartItems, setCartItems] = useState(cartProducts)
+    let navigate = useNavigate();
+
+    const [amount, setAmount] = useState()
     // // console.log(typeof(cartItems[0].unit_price))
     let sum = 0
     for(let product of cartProducts){
         sum += product.unit_price
+    }
+
+    function onChangeAmount(e){
+        setAmount(e.target.value)
+    }
+
+    function handleSubmitAmount(e){
+        e.preventDefault();
+        if(sum !== parseInt(amount)){
+            alert('Please confirm the amount to pay!')
+        }else{
+            navigate('/receipt')
+        }
     }
     
     
@@ -25,6 +41,10 @@ function Cart ({cartProducts, onRemoveFromCart}){
             })}
             <h2>Proceed to checkout</h2>
             <p>Total Amount to Pay: {sum}</p>
+            <form onSubmit={handleSubmitAmount}>
+                <input type="number" onChange={onChangeAmount}/>
+                <button type="submit">Confirm Payment</button>
+            </form>
         </div>
     )
 }
