@@ -21,6 +21,7 @@ function Home (){
                 <img src={product.product_thumbnail} alt={product.name}/>
                 <h3>{product.product_name}</h3>
                 <p>Price: KES{product.unit_price}</p>
+                <button>Add Item to Cart</button>
             </div>
         )
     })
