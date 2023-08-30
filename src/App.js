@@ -6,6 +6,7 @@ import Signup from './Components/Signup';
 import Cart from './Components/Cart';
 import NotFound from './Components/NotFound';
 
+
 function App() {
   /**
    * Hello team, I may need some help on rendering the specific product whenever it is clicked. I stayed up late in the night but did not figure it out.

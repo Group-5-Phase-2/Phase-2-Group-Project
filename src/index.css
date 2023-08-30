@@ -52,6 +52,45 @@ code {
   object-fit: contain;
   margin: auto;
 }
+
+.transparent-form {
+  width: 150px;
+  height: 200px;
+  background-color: rgba(150, 146, 146, 0.5); 
+  border: 20px;
+  margin: 10px;
+  padding: 50px;
+  border-radius: 10px;
+  
+}
+
+.transparent-form label,
+.transparent-form input {
+  display: block;
+
+  margin-bottom: 10px;
+  border: 40px;
+ 
+}
+
+.transparent-form input {
+  width: auto;
+  height: 20px;
+  padding: 10px;
+  
+  border-radius: 5px;
+
+}
+.submit-button{
+  background-color: aqua;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+
+}
+.link{
+ text-decoration: none;
+
 .header{
   display: flex;
   justify-content: center;
@@ -126,4 +165,5 @@ code {
 
 .login-link a:hover {
   text-decoration: underline;
+
 }
