@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 
@@ -21,9 +22,12 @@ function Home (){
                 <img src={product.product_thumbnail} alt={product.name}/>
                 <h3>{product.product_name}</h3>
                 <p>Price: KES{product.unit_price}</p>
+                <button><Link to={`/products/${index}`}>View Product Details</Link></button>
+                <button>Add Item to Cart</button>
             </div>
         )
     })
+    
 
 
     return (
