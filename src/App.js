@@ -15,8 +15,8 @@ function App() {
   
   function addToCart(product){
     //.some() ensures that a product is added only once.
-    const productExists =cartProducts.some((cartProduct)=>cartProduct.product_name===product.product_name)
-                          &&cartProducts.some((cartProduct)=>cartProduct.unit_price===product.unit_price)
+    const productExists =cartProducts.some((cartProduct)=>cartProduct.product_name === product.product_name)
+                          && cartProducts.some((cartProduct)=>cartProduct.unit_price === product.unit_price)
     if(productExists){
       alert("Product already added to the cart!")
      }else{
@@ -25,21 +25,26 @@ function App() {
     }
   }
 
+  function handleRemoveItemFromCart(product){
+    setcartProducts(cartProducts.filter(cartProduct => cartProduct.product_name !== product.product_name) && cartProducts.filter(cartProduct => cartProduct.unit_price !== product.unit_price))
+  }
+
+
+
   return (
     <div className="App">
       <Routes>
           <Route element={<Landing/>}>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/products' element={<Home/>}/>
+            <Route path='/' element={<Home onAddProduct={addToCart}/>}/>
+            <Route path='/products' element={<Home onAddProduct={addToCart}/>}/>
             <Route path='/home' element={<Home onAddProduct={addToCart}/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/signup' element={<Signup/>}/>
-            <Route path='/cart' element={<Cart cartProducts={cartProducts}/>}/>
+            <Route path='/cart' element={<Cart cartProducts={cartProducts} onRemoveFromCart = {handleRemoveItemFromCart}/>}/>
             <Route path='/products/:index' element={<Product/>}/>
           </Route>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
-   
     </div>
   );
 }

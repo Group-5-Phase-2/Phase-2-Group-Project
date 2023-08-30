@@ -1,4 +1,14 @@
-function Cart ({cartProducts}){
+// import {useState} from 'react'
+
+function Cart ({cartProducts, onRemoveFromCart}){
+    // const [cartItems, setCartItems] = useState(cartProducts)
+    // // console.log(typeof(cartItems[0].unit_price))
+    let sum = 0
+    for(let product of cartProducts){
+        sum += product.unit_price
+    }
+    
+    
     
     return (
         <div>
@@ -8,11 +18,13 @@ function Cart ({cartProducts}){
                     <img src={cartProduct.product_thumbnail} alt={cartProduct.product_name}/>
                     <h3>{cartProduct.product_name}</h3>
                     <p>Price: KES{cartProduct.unit_price}</p>
-                    <button>Remove from cart</button>
+                    <button onClick={()=>onRemoveFromCart(cartProduct)}>Remove from cart</button>
 
                 </div>
                 )
             })}
+            <h2>Proceed to checkout</h2>
+            <p>Total Amount to Pay: {sum}</p>
         </div>
     )
 }
