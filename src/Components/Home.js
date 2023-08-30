@@ -2,9 +2,10 @@ import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 
 
-function Home (){
+function Home ({onAddProduct}){
     // Setting the products variable before fetching the data from the JSON server
     const [products, setProducts] = useState([])
+    
 
     // Fetching the data from the JSON server.
     useEffect(()=>{
@@ -22,6 +23,7 @@ function Home (){
                 <img src={product.product_thumbnail} alt={product.name}/>
                 <h3>{product.product_name}</h3>
                 <p>Price: KES{product.unit_price}</p>
+                <button onClick={()=>onAddProduct(product)}>Add Item to Cart</button>
                 <button><Link to={`/products/${index}`}>View Product Details</Link></button>
                 <button>Add Item to Cart</button>
             </div>
