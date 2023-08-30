@@ -7,6 +7,7 @@ import Signup from './Components/Signup';
 import Cart from './Components/Cart';
 import NotFound from './Components/NotFound';
 import Product from './Components/Product';
+import Receipt from './Components/Receipt';
 
 
 
@@ -42,6 +43,7 @@ function App() {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/cart' element={<Cart cartProducts={cartProducts} onRemoveFromCart = {handleRemoveItemFromCart}/>}/>
             <Route path='/products/:index' element={<Product/>}/>
+            <Route path='/receipt' element={<Receipt products={cartProducts}/>}/>
           </Route>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
