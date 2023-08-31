@@ -12,10 +12,10 @@ function Product(){
         .then(r=>r.json())
         .then(data => setproduct(data[index]))
         .catch(e=>console.log(e))
-    }, [])
+    }, [index])
 
     return(
-        <div>
+        <div className="productItem">
             <img src={product.product_full_image} alt={product.name}/>
             <h3>{product.product_name}</h3>
             <span>Price: KES{product.unit_price}</span>
