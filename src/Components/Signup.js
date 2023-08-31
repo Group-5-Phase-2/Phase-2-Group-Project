@@ -2,22 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-async function signUp(data) {
-  try {
-    const response = await fetch("http://ecommerce.muersolutions.com/api/v1/user/signup", {
-      method: "POST",
-      headers: {
-        "accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-    return await response.json();
-  } catch (error) {
-    return console.error("Error:", error);
-  }
-}
-
 
 const Signup = () => {
 
@@ -37,16 +21,32 @@ function handleSignUp(event) {
     email: email,
     password: password
   };
+  event.target.reset();
 
-  signUp(userData)
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+  fetch('http://ecommerce.muersolutions.com/api/v1/user/signup', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(userData)
+  })
+  .then(r=>r.json())
+  .then(data =>{
+    console.log(data);
+    setFirstName(""); 
+    setLastName("");
+    setEmail("");
+    setPassword("");
+  })
+  .then(alert("User Registered Successfully"))
+  .catch(e=>console.log(e))
 }
 
+
   return (
-    <div className="signup-form">
+    <div className="form">
       <h2>Sign Up</h2>
-      <form onSubmit={handleSignUp} className="signup-form">
+      <form onSubmit={handleSignUp} className="form">
         <div className="input-group">
           <label htmlFor="firstName">First Name:</label>
           <input
