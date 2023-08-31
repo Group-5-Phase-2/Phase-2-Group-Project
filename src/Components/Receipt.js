@@ -7,31 +7,33 @@ function Receipt({products}){
     }
 
     return(
-        <div>
+        <div className='receipt'>
             <h1>Thank you for shopping with us</h1>
             <p>Transaction Ref: {uuidv4()}</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {products.map((product, index)=>{
-                        return(
-                            <tr key={index}>
-                                <td>{product.product_name}</td>
-                                <td>{product.unit_price}</td>
-                            </tr>
-                        )
-                    })}
-                    <tr>
-                        <td>Sum</td>
-                        <td>{sum}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className='table-container'>
+                <table className='styled-table'>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {products.map((product, index)=>{
+                            return(
+                                <tr key={index}>
+                                    <td>{product.product_name}</td>
+                                    <td>{product.unit_price}</td>
+                                </tr>
+                            )
+                        })}
+                        <tr className='footer'>
+                            <td>Totals</td>
+                            <td>{sum}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             
         </div>
     )

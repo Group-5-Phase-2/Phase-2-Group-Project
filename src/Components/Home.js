@@ -33,7 +33,7 @@ function Home ({ onAddProduct }){
 
     return (
         <div>
-            <h1>Our Products</h1>
+            <h1 className="products-header">Our Products</h1>
             <div className="productsList">
                 {productsList}
             </div>
