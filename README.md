@@ -29,12 +29,26 @@ Next, run `npm install` command to install all the required dependencies and aft
 ## Technologies Used
 
 * React
+* CSS
+* JSX
+
+
 
 ## How to Use
 
 ## Authors
+Joel Nyongesa
+Medrine Mulindi
+Mucsin Yusuf
+Humphrey Njuguna
+Lehane Hamdhi
 
 ## Contacts
+https://github.com/joelnyongesa
+https://github.com/Mulindi123
+https://github.com/muxsinyusuf
+https://github.com/Humphreynguguna
+https://github.com/Lehane-P
 
 ## Licence
 
