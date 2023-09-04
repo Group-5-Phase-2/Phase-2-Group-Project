@@ -37,18 +37,18 @@ Next, run `npm install` command to install all the required dependencies and aft
 ## How to Use
 
 ## Authors
-Joel Nyongesa
-Medrine Mulindi
-Mucsin Yusuf
-Humphrey Njuguna
-Lehane Hamdhi
+* Joel Nyongesa
+* Medrine Mulindi
+* Mucsin Yusuf
+* Humphrey Njuguna
+* Lehane Hamdhi
 
 ## Contacts
-https://github.com/joelnyongesa
-https://github.com/Mulindi123
-https://github.com/muxsinyusuf
-https://github.com/Humphreynguguna
-https://github.com/Lehane-P
+* [Joel Nyongesa](https://github.com/joelnyongesa)
+* [Medrine Mulindi](https://github.com/Mulindi123)
+* [Mucsin Yusuf](https://github.com/muxsinyusuf)
+* [Humphrey Njuguna](https://github.com/Humphreynguguna)
+* [Lehane Hamdhi](https://github.com/Lehane-P)
 
 ## Licence
 
