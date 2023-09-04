@@ -35,6 +35,19 @@ Next, run `npm install` command to install all the required dependencies and aft
 
 
 ## How to Use
+* As a user i can  view a list of products upon landing on the platform i.e. without signing in.
+
+* As a user i can  click on a product and view more details pertaining to that product they’ve clicked.
+
+* As a user i can  register to the platform as a customer
+
+* As a user i can  log in to the platform with the credentials that were used to register to the platform as a customer.
+
+* As a user i can  add/ remove a product of choice to the cart.
+
+* As a user i can  view the number of items added to the cart. 
+
+* As a user i can  perform checkout i.e. by adding an address for delivery purposes, simulate a payment process and generate an order receipt for the goods purchases.
 
 ## Authors
 * Joel Nyongesa

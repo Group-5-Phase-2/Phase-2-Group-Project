@@ -1,11 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 
 const Signup = () => {
-const navigate = useNavigate()
+
 const [firstName, setFirstName]=useState("")
 const [lastName, setLastName]=useState("")
 const [email, setEmail]=useState("")
@@ -34,11 +33,10 @@ function handleSignUp(event) {
   .then(r=>r.json())
   .then(data =>{
     console.log(data);
-    navigate("/home");
-    // setFirstName(""); 
-    // setLastName("");
-    // setEmail("");
-    // setPassword("");
+    setFirstName(""); 
+    setLastName("");
+    setEmail("");
+    setPassword("");
   })
   .then(alert("User Registered Successfully"))
   .catch(e=>console.log(e))
