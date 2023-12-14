@@ -9,7 +9,10 @@ function Home ({ onAddProduct }){
 
     // Fetching the data from the JSON server.
     useEffect(()=>{
-        fetch('http://ecommerce.muersolutions.com/api/v1/products')
+        fetch('http://ecommerce.muersolutions.com/api/v1/products',
+        {
+            referrerPolicy: "unsafe-url"
+        })
         .then(r=>r.json())
         .then(data => setProducts(data))
         .catch(e=>console.log(e))
